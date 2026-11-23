@@ -1,0 +1,34 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5433}/${DB_NAME:eventpulse_db}?sslmode=disable
+    username: ${DB_USER:eventpulse_user}
+    password: ${DB_PASSWORD:eventpulse_secure_password}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: ${DB_POOL_MAX_SIZE:10}
+      minimum-idle: 2
+      connection-timeout: 10000
+      idle-timeout: 300000
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PASSWORD:}
+      timeout: 2000ms
+
+logging:
+  level:
+    root: INFO
+    com.eventpulse: DEBUG
+    org.springframework.security: INFO
+    org.hibernate.SQL: INFO

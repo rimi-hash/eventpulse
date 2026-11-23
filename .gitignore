@@ -1,0 +1,46 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Environment & Secrets (NEVER COMMIT)
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# Java & Maven
+target/
+*.class
+*.jar
+*.war
+.mvn/wrapper/maven-wrapper.jar
+
+# Frontend & Node
+node_modules/
+dist/
+dist-ssr/
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE & Editors
+.idea/
+*.iml
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Database & Storage Volumes
+postgres_data/
+redis_data/
+
+# Scratch & Local Backups
+scratch/
+backup_*.sql
+*.backup
+*.dump

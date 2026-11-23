@@ -1,0 +1,40 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MODE=PostgreSQL
+    username: sa
+    password: 
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+logging:
+  level:
+    root: WARN
+    com.eventpulse: INFO
+
+eventpulse:
+  admin:
+    email: admin@eventpulse.io
+    password: Admin@EventPulse2027!
+  seed:
+    demo-data: true
+  google:
+    client-id: 444478639706-nrklqsnjumbetkdpe021msoslae4j83q.apps.googleusercontent.com
+  razorpay:
+    key-id: rzp_test_ToFUKFviPA02pH
+    key-secret: test-dummy-secret-eventpulse
+    webhook-secret: test-dummy-webhook-secret-ep
+  assistant:
+    gemini:
+      api-key: test-mock-key
+      model: gemini-2.5-flash-lite
+
