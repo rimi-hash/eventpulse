@@ -74,7 +74,7 @@ Modern live-event ticketing platforms break down at extreme concurrency: ticket 
 - **Anti-Fraud Replay Protection:** Timestamped cryptographic payload with nonce tracking prevents duplicate scan re-entries or static screenshot fraud.
 - **Offline Resilient:** Capable of validating signed HMAC passes even during intermittent network blackouts.
 
-### 🤖 Intelligent Assistant ("Jarvis")
+### 🤖 Intelligent Assistant ("Yas")
 - **Powered by Google Gemini 2.5 Flash:** Natural language understanding for conversational event discovery, venue accessibility queries, and personalized recommendations.
 - **Grounded Responses:** Explains recommendations without hallucinations by grounding answers directly in verified event catalog data.
 
